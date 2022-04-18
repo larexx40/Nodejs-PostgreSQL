@@ -33,7 +33,7 @@ exports.createUser = (req, res) => {
 
 exports.updateUser = (req, res) => {
     const id = parseInt(req.params.id)
-    const { name, email } = request.body
+    const { name, email } = req.body
   
     pool.query(
       'UPDATE userstable SET name = $1, email = $2 WHERE id = $3',
